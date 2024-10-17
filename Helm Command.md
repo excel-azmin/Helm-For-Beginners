@@ -13,7 +13,7 @@ kubectl create deploy my-deployment --image=nginx --dry-run=client -o yaml > tem
 # Create Service File
 
 ```
-kubectl create service clusterip my-service --tcp=80:80 --dry-run=client -o yaml > templates/service.yaml
+kubectl create service clusterip/nodeport my-service --tcp=80:80 --dry-run=client -o yaml > templates/service.yaml
 
 ```
 
@@ -22,3 +22,12 @@ kubectl create service clusterip my-service --tcp=80:80 --dry-run=client -o yaml
 ```
 helm install first-release .
 ```
+
+# Basic Helm Command 
+
+* Check helm syntex error : `helm lint .`
+* Helm template : `helm template .`
+* Helm list: `helm list`
+* Uninstall helm : `helm uninstall app-name`
+* Helm dry-run : `helm install my-chart . --dry-run`
+* Helm help : `helm --help`
