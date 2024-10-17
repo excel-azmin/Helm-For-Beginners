@@ -31,3 +31,17 @@ helm install first-release .
 * Uninstall helm : `helm uninstall app-name`
 * Helm dry-run : `helm install my-chart . --dry-run`
 * Helm help : `helm --help`
+
+
+# Helm Wordpress Install
+
+* Visit (Official Documentation)[https://artifacthub.io/packages/helm/bitnami/wordpress?modal=install]
+* `helm repo add bitnami https://charts.bitnami.com/bitnami`
+* `helm install my-wordpress bitnami/wordpress --version 23.1.22`
+
+**Add Manually**
+
+* `helm pull --untar bitnami/wordpress --version 23.1.22`
+* Upgrade wordpress with custom values: `helm upgrade my-wordpress . --values custom-values.yaml`
+* Helm history check : `helm history my-wordpress`
+* Helm rollbacke : `helm rollback my-wordpress 1`
